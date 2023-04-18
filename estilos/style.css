@@ -1,27 +1,29 @@
 @charset "UTF-8";
 
+
 *{
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 html, body{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background-color: black;
 }
 
 body{
-    background: url(../imagens/fundo-madeira.jpg) no-repeat top center;
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
     background-size:cover; /*para deixar a tela de fundo tomando toda a tela*/
     background-attachment: fixed; /*para caso tenha barra de rolagem o telefone ficar fixo na tela*/
 
 }
 main{
     position:relative;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
+    
 }
 
 section#telefone{
@@ -30,12 +32,37 @@ section#telefone{
     left: 50%;
     transform: translate(-50%, -50%); /*Para deixar o celular centralizado*/
 
-    height: 65%;
-    width: 32%;
-    background: url(../imagens/frame-iphone.png) no-repeat;
+    height: 627px;
+    width: 311px;
+    background: url('../imagens/frame-iphone.png') no-repeat;
+
+}
+
+iframe#tela{
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 269px;
+    height: 471px;
 
 }
 
 section#redes-sociais{
+    text-align: right; /*depois de colocar a tag <br> depois de </a> na pagina html para quebrar linha essa ação no css deixa as imagens do lado direito da tela  */
+}
 
+section#redes-sociais img{
+    width: 50px; /*quando reduz a largura ja reduz o tamanho tamnbem*/
+    margin: 10px; /* separa uma imagem da outra*/
+    border-radius: 50%; /*para deixar as imagens redondas*/
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400); /*sombreamento*/
+    box-sizing: border-box; /*para a borda fazer parte da caixa e as outras imagens não se mecherem quando o mouse passar por cima*/
+}
+
+section#redes-sociais img:hover {
+    /*animação nas imagens de menu*/
+    border: 2px solid white;
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.623);
+    transition: transform .3s, border 1s;
 }

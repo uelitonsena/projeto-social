@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+body{
+    background: url(../imagens/fundo-madeira.jpg) no-repeat top center;
+    background-size:cover; /*para deixar a tela de fundo tomando toda a tela*/
+    background-attachment: fixed; /*para caso tenha barra de rolagem o telefone ficar fixo na tela*/
+
+}
+main{
+    position:relative;
+    height: 100%;
+}
+
+section#telefone{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*Para deixar o celular centralizado*/
+
+    height: 65%;
+    width: 32%;
+    background: url(../imagens/frame-iphone.png) no-repeat;
+
+}
+
+section#redes-sociais{
+
+}
